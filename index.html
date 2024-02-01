@@ -21,6 +21,7 @@
                 <label for="artist">Artista:</label>
                 <input type="text" id="artist" name="artist" class="form-control" required>
             </div>
+            <a href="https://www.instagram.com/vibespadova/" target="_blank" onclick="verificaClicInstagram()">Seguici su Instagram</a>
             <button type="submit" class="btn btn-primary">Invia Richiesta</button>
         </form>
     </main>
@@ -33,4 +34,56 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
+<script>
+    // Funzione per verificare se l'utente ha cliccato sul link Instagram
+    function verificaClicInstagram() {
+      var confermato = confirm("Hai seguito il nostro profilo Instagram?");
+      
+      if (confermato) {
+        // Se l'utente conferma di aver seguito il profilo Instagram, abilita il submit del modulo
+        document.getElementById('songRequestForm').addEventListener('submit', function(event) {
+          // Impedisci l'invio del modulo predefinito se l'utente non ha confermato
+          event.preventDefault();
+          
+          // Continua con l'invio del modulo
+          inviaRichiesta();
+        });
+      } else {
+        alert("Perfavore segui il nostro profilo Instagram per poter inviare una richiesta.");
+      }
+    }
+  
+    // Funzione per inviare la richiesta dopo aver cliccato sul link Instagram
+    function inviaRichiesta() {
+      // Recupera i dati dal modulo
+      var songTitle = document.getElementById('songTitle').value;
+      var artist = document.getElementById('artist').value;
+  
+      // Invia i dati al server per l'aggiunta al database
+      fetch('http://vibes-internal.mrfreex.net:3369/api/aggiungiRichiesta', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ songTitle, artist })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          // La richiesta è stata aggiunta con successo
+          console.log(data.message);
+          // Puoi eseguire azioni aggiuntive come pulire i campi del modulo
+          document.getElementById('songTitle').value = '';
+          document.getElementById('artist').value = '';
+        } else {
+          // Gestisci eventuali errori
+          console.error(data.error);
+        }
+      })
+      .catch(error => {
+        console.error('Errore nell\'invio della richiesta al server:', error);
+      });
+    }
+  </script>
+  
 </html>
