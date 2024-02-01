@@ -11,7 +11,8 @@ $result = $dbConnection->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo '<li>' . $row['titolo'] . ' - ' . $row['artista'] . '</li>';
+        $likes = $row['likes']; // Aggiungi questa riga per ottenere il numero di likes
+        echo '<li>' . $row['titolo'] . ' - ' . $row['artista'] . ' - Likes: ' . $likes . '</li>';
     }
 } else {
     echo '<p>Nessuna richiesta trovata.</p>';
