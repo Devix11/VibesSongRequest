@@ -18,8 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ songTitle, artist })
+      body: JSON.stringify({ songTitle: songTitle, artist: artist })
     })
+      
     .then(response => response.json())
     .then(data => {
       if (data.success) {
