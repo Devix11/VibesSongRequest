@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 5500; // Sostituisci con la porta che desideri utilizzare
+const port = 3339; // Sostituisci con la porta che desideri utilizzare
 const mysql = require('mysql2'); // Assicurati di aver installato il modulo mysql2
 
 app.use(express.json());
