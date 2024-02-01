@@ -12,15 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     console.log('Titolo della canzone:', songTitle);
     console.log('Artista:', artist);
-    // Invia i dati al server per l'aggiunta al database
-    fetch('http://vibes-internal.mrfreex.net:3369/api/aggiungiRichiesta', {
+
+    // Invia i dati al server tramite una richiesta POST
+    const formData = new FormData();
+    formData.append('songTitle', songTitle);
+    formData.append('artist', artist);
+
+    fetch('server.php', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ songTitle: songTitle, artist: artist })
+      body: formData
     })
-      
     .then(response => response.json())
     .then(data => {
       if (data.success) {
