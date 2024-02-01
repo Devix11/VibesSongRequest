@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const songTitle = document.getElementById('songTitle').value;
     const artist = document.getElementById('artist').value;
 
+    console.log('Titolo della canzone:', songTitle);
+    console.log('Artista:', artist);
     // Invia i dati al server per l'aggiunta al database
     fetch('http://vibes-internal.mrfreex.net:3369/api/aggiungiRichiesta', {
       method: 'POST',
