@@ -1,0 +1,46 @@
+/* Aggiungi questo CSS al tuo file CSS personalizzato o crea un nuovo file .css */
+
+/* Stile per l'header */
+header {
+    background-color: #007bff; /* Colore di sfondo */
+    color: white; /* Colore del testo */
+    padding: 20px 0; /* Spaziatura interna superiore e inferiore */
+}
+
+/* Stile per il titolo dell'header */
+header h1 {
+    font-size: 36px; /* Dimensione del testo */
+}
+
+/* Stile per il corpo principale */
+main {
+    padding: 20px; /* Spaziatura interna */
+}
+
+/* Stile per la lista delle richieste */
+ul.list-group {
+    max-width: 600px; /* Larghezza massima della lista */
+    margin: 0 auto; /* Centratura orizzontale */
+}
+
+/* Stile per i singoli elementi della lista */
+ul.list-group li {
+    padding: 10px 15px; /* Spaziatura interna */
+    margin-bottom: 5px; /* Margine inferiore tra gli elementi */
+    background-color: #f8f9fa; /* Colore di sfondo */
+    border: 1px solid #dee2e6; /* Bordo */
+    border-radius: 4px; /* Angoli arrotondati */
+}
+
+/* Stile per il footer */
+footer {
+    background-color: #f8f9fa; /* Colore di sfondo */
+    padding: 10px 0; /* Spaziatura interna superiore e inferiore */
+    text-align: center; /* Allineamento del testo al centro */
+}
+
+/* Stile per il copyright nel footer */
+footer p {
+    font-size: 14px; /* Dimensione del testo */
+    color: #6c757d; /* Colore del testo */
+}
