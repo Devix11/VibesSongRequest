@@ -15,7 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param('ss', $songTitle, $artist);
 
     if ($stmt->execute()) {
-        echo 'Richiesta aggiunta con successo';
+        // Reindirizza l'utente a requests.html dopo aver aggiunto con successo la richiesta
+        header('Location: requests.html');
+        exit;
     } else {
         echo 'Errore nell\'inserimento della richiesta';
     }
