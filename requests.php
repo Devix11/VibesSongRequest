@@ -18,7 +18,7 @@
         </ul>
     </main>
     <footer class="bg-light text-center py-3">
-        <p>&copy; 2024 Il Tuo Sito Web</p>
+        <p>&copy; 2024 Vibes Events</p>
     </footer>
 
     <!-- Aggiungi il collegamento a Bootstrap JavaScript e jQuery -->
