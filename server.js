@@ -31,7 +31,14 @@ dbConnection.connect((err) => {
 
 // Gestisci la richiesta POST per l'aggiunta di una richiesta al database
 app.post('/api/aggiungiRichiesta', (req, res) => {
-  const { songTitle, artist } = req.body;
+    if (!req.body || Object.keys(req.body).length === 0) {
+      // Gestisci il caso in cui il corpo della richiesta è vuoto o undefined
+      console.error('Il corpo della richiesta è vuoto o undefined');
+      res.status(400).json({ success: false, error: 'Dati del modulo mancanti o non validi' });
+      return;
+    }
+  
+    const { songTitle, artist } = req.body;
 
   // Esegui l'aggiunta della richiesta al database
   const sql = 'INSERT INTO richieste (titolo, artista) VALUES (?, ?)';
