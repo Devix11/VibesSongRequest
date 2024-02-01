@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const artist = document.getElementById('artist').value;
 
     // Invia i dati al server per l'aggiunta al database
-    fetch('/api/aggiungiRichiesta', {
+    fetch('http://vibes-internal.mrfreex.net:3369/api/aggiungiRichiesta', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
