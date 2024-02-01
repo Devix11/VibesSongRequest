@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inserisci Richiesta Canzone</title>
+    <!-- Collegamento a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="bg-primary text-white text-center py-4">
         <h1>Inserisci Richiesta Canzone</h1>
     </header>
-    <main>
-        <form method="post" action="server.php"> <!-- Il modulo invierà i dati al server.php -->
-            <label for="songTitle">Titolo della Canzone:</label>
-            <input type="text" id="songTitle" name="songTitle" required>
-            
-            <label for="artist">Artista:</label>
-            <input type="text" id="artist" name="artist" required>
-            
-            <button type="submit">Invia Richiesta</button>
-        </form>        
+    <main class="container mt-4">
+        <form method="post" action="server.php">
+            <div class="form-group">
+                <label for="songTitle">Titolo della Canzone:</label>
+                <input type="text" id="songTitle" name="songTitle" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="artist">Artista:</label>
+                <input type="text" id="artist" name="artist" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Invia Richiesta</button>
+        </form>
     </main>
-    <footer>
+    <footer class="bg-light text-center py-3">
         <p>&copy; 2024 Vibes Events</p>
     </footer>
+
+    <!-- Collegamento a Bootstrap JavaScript e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
