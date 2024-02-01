@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('Il DOM è stato caricato e il codice JavaScript sta funzionando.');
   const songRequestForm = document.getElementById('songRequestForm');
 
   // Gestisci l'invio del modulo
