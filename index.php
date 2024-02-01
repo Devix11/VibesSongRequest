@@ -20,7 +20,7 @@
             <label for="artist">Artista:</label>
             <input type="text" id="artist" name="artist" required>
             
-            <button type="submit" id="submitButton" name="submit" disabled>Invia Richiesta</button>
+            <button type="submit" id="submitButton" name="submit">Invia Richiesta</button>
         </form>        
     </main>
     <footer>
