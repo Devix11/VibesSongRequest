@@ -1,5 +1,12 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['submit'])) {
+    // Verifica se l'utente ha cliccato sul link Instagram
+    if (isset($_POST['instagramClicked']) && $_POST['instagramClicked'] == 'yes') {
+        // L'utente ha cliccato sul link Instagram, puoi processare la richiesta
+        // Esegui l'aggiunta della richiesta al database
+        $songTitle = $_POST['songTitle'];
+        $artist = $_POST['artist'];
+
     $songTitle = $_POST['songTitle'];
     $artist = $_POST['artist'];
 
@@ -13,14 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql = 'INSERT INTO richieste (titolo, artista) VALUES (?, ?)';
     $stmt = $dbConnection->prepare($sql);
     $stmt->bind_param('ss', $songTitle, $artist);
+} else {
+    // L'utente non ha cliccato sul link Instagram, non puoi processare la richiesta
+    echo 'Per favore, clicca sul link Instagram per seguire Vibes Padova.';
+}   
 
-    if ($stmt->execute()) {
-        // Reindirizza l'utente a requests.html dopo aver aggiunto con successo la richiesta
         header('Location: requests.php');
         exit;
-    } else {
-        echo 'Errore nell\'inserimento della richiesta';
-    }
 
     $stmt->close();
     $dbConnection->close();
