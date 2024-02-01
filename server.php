@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($stmt->execute()) {
         // Reindirizza l'utente a requests.html dopo aver aggiunto con successo la richiesta
-        header('Location: requests.html');
+        header('Location: requests.php');
         exit;
     } else {
         echo 'Errore nell\'inserimento della richiesta';
