@@ -12,7 +12,7 @@
     <main>
         <p>Per favore, clicca su <a href="https://www.instagram.com/vibespadova/" target="_blank" id="instagramLink">questo link</a> per seguire Vibes Padova su Instagram.</p>
         <!-- tasto "HAI CLICCATO IL LINK INSTAGRAM" -->
-        <button type="button" id="instagramButton">Hai cliccato il link Instagram?</button>
+        <button type="checkbox" id="instagramButton">Hai cliccato il link Instagram?</button>
         <form method="post" action="server.php"> <!-- Il modulo invierà i dati al server.php -->
             <label for="songTitle">Titolo della Canzone:</label>
             <input type="text" id="songTitle" name="songTitle" required>
