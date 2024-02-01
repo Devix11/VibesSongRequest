@@ -33,6 +33,7 @@ dbConnection.connect((err) => {
 app.post('/api/aggiungiRichiesta', (req, res) => {
     if (!req.body || Object.keys(req.body).length === 0) {
       // Gestisci il caso in cui il corpo della richiesta è vuoto o undefined
+      console.log(req.body);
       console.error('Il corpo della richiesta è vuoto o undefined');
       res.status(400).json({ success: false, error: 'Dati del modulo mancanti o non validi' });
       return;
