@@ -14,10 +14,9 @@
     </header>
     <main class="container mt-4">
         <ul class="list-group">
-            <li><a>Titolo - Artista</a></li>
+            <a>Titolo - Artista</a>
         </ul>
         <ul class="list-group">
-
             <?php include('get_requests.php'); ?>
         </ul>
     </main>
