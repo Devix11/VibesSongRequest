@@ -9,7 +9,7 @@
 </head>
 <body class="bg-red-500 text-white">
     <header class="bg-primary text-white text-center py-4">
-        <h1 class="text-3xl">Lista Richieste</h1>
+        <h1 class="text-3xl bg-red-500">Lista Richieste</h1>
     </header>
     <main class="bg-white p-8 mt-8 rounded-lg shadow-lg max-w-md mx-auto">
         <ul class="list-inside list-disc">
