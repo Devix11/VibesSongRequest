@@ -13,7 +13,7 @@
         <h1>Lista Richieste</h1>
     </header>
     <main class="container mt-4">
-        <ul>
+        <ul class="list-group">
             <li><a>Titolo - Artista</a></li>
         </ul>
         <ul class="list-group">
