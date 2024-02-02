@@ -16,7 +16,7 @@
             <?php include('get_requests.php'); ?>
         </ul>
     </main>
-    <footer class="bg-light text-center py-3">
+    <footer class="bg-red-500 text-center py-3">
         <p>&copy; 2024 Vibes Events</p>
     </footer>
 </body>
