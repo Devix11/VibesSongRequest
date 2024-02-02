@@ -13,6 +13,9 @@
         <h1>Lista Richieste</h1>
     </header>
     <main class="container mt-4">
+        <ul>
+            <li><a href="index.php">Titolo - Artista</a></li>
+        </ul>
         <ul class="list-group">
             <?php include('get_requests.php'); ?>
         </ul>
