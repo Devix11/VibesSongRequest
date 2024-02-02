@@ -1,11 +1,5 @@
 <?php
 if (isset($_POST['submit'])) {
-    // Verifica se l'utente ha cliccato sul link Instagram
-    if (isset($_POST['instagramButton'])) {
-        // L'utente ha cliccato sul link Instagram, puoi processare la richiesta
-        // Esegui l'aggiunta della richiesta al database
-        $songTitle = $_POST['songTitle'];
-        $artist = $_POST['artist'];
 
     $songTitle = $_POST['songTitle'];
     $artist = $_POST['artist'];
