@@ -17,12 +17,12 @@
                 <form method="post" action="server.php" class="bg-white p-8 mt-8 rounded-lg shadow-lg max-w-md mx-auto">
     <div class="mb-4">
         <label for="songTitle" class="block text-sm font-bold mb-2 text-black">Titolo della Canzone:</label>
-        <input type="text" id="songTitle" name="songTitle" class="w-full border rounded-lg py-2 px-3 focus:outline-none focus:border-red-500" required>
+        <input type="text" id="songTitle" name="songTitle" class="text-black w-full border rounded-lg py-2 px-3 focus:outline-none focus:border-red-500" required>
     </div>
     
     <div class="mb-4">
         <label for="artist" class="block text-sm font-bold mb-2 text-black">Artista:</label>
-        <input type="text" id="artist" name="artist" class="w-full border rounded-lg py-2 px-3 focus:outline-none focus:border-red-500" required>
+        <input type="text" id="artist" name="artist" class="text-black w-full border rounded-lg py-2 px-3 focus:outline-none focus:border-red-500" required>
     </div>
     
     <div class="mb-4">
