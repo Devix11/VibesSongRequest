@@ -7,7 +7,7 @@
     <!-- Collegamento a Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-black text-white">
+<body class="bg-red-500 text-white">
     <section class="hero bg-red-500 h-screen">
         <div class="hero-body">
             <div class="container mx-auto text-center">
