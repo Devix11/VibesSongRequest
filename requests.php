@@ -12,7 +12,7 @@
         <h1 class="text-3xl">Lista Richieste</h1>
     </header>
     <main class="container mx-auto mt-4">
-        <ul class="list-group">
+        <ul class="list-inside list-disc">
             <?php include('get_requests.php'); ?>
         </ul>
     </main>
