@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
             echo '<th><li><a class="bg-cyan-500 shadow-lg shadow-cyan-500/50" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></li></th>';
             echo '</tr>';
         }
-        echo'</table>'
+        echo'</table>';
     }
 else {
     echo '<p>Nessuna richiesta trovata.</p>';
