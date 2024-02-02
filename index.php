@@ -7,31 +7,42 @@
     <!-- Collegamento a Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <header class="bg-blue-500 p-4 text-white text-center">
-        <h1 class="text-2xl">Inserisci Richiesta Canzone</h1>
-    </header>
-    <main class="container mx-auto mt-8 p-4">
-        <div class="bg-white rounded-lg shadow-lg p-8">
-            <p class="mb-4">Per favore, clicca su <a href="https://www.instagram.com/vibespadova/" target="_blank" id="instagramLink" class="text-blue-500">questo link</a> per seguire Vibes Padova su Instagram.</p>
-            <!-- CHECKBOX "HAI CLICCATO IL LINK INSTAGRAM" -->
-            <label for="instagramButton" class="block mb-2">Hai cliccato il link Instagram?</label>
-            <input type="checkbox" id="instagramButton" name="instagramButton" required class="mb-4">
-            <form method="post" action="server.php" class="space-y-4">
-                <div class="flex flex-col">
-                    <label for="songTitle" class="mb-1">Titolo della Canzone:</label>
-                    <input type="text" id="songTitle" name="songTitle" required class="border rounded-lg py-2 px-3 focus:outline-none focus:border-blue-500">
-                </div>
-                <div class="flex flex-col">
-                    <label for="artist" class="mb-1">Artista:</label>
-                    <input type="text" id="artist" name="artist" required class="border rounded-lg py-2 px-3 focus:outline-none focus:border-blue-500">
-                </div>
-                <button type="submit" id="submitButton" name="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">Invia Richiesta</button>
-            </form>
+<body class="bg-black text-white">
+    <section class="hero bg-red-500 h-screen">
+        <div class="hero-body">
+            <div class="container mx-auto text-center">
+                <h1 class="text-3xl font-bold mt-16">Inserisci Richiesta Canzone</h1>
+                <p class="mt-4">Per favore, clicca su <a href="https://www.instagram.com/vibespadova/" target="_blank" id="instagramLink" class="text-blue-500">questo link</a> per seguire Vibes Padova su Instagram.</p>
+                <!-- Checkbox "HAI CLICCATO IL LINK INSTAGRAM" -->
+                <form method="post" action="server.php" class="bg-white p-8 mt-8 rounded-lg shadow-lg max-w-md mx-auto">
+                    <div class="mb-4">
+                        <label for="songTitle" class="block text-sm font-bold mb-2">Titolo della Canzone:</label>
+                        <input type="text" id="songTitle" name="songTitle" class="w-full border rounded-lg py-2 px-3 focus:outline-none focus:border-red-500" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="artist" class="block text-sm font-bold mb-2">Artista:</label>
+                        <input type="text" id="artist" name="artist" class="w-full border rounded-lg py-2 px-3 focus:outline-none focus:border-red-500" required>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="instagramButton" class="block">
+                            <input type="checkbox" id="instagramButton" name="instagramButton" required>
+                            Hai cliccato il link Instagram?
+                        </label>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <button type="submit" id="submitButton" name="submit" class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Invia Richiesta</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </main>
-    <footer class="bg-gray-300 text-center py-4">
-        <p>&copy; 2024 Vibes Events</p>
+    </section>
+    <footer class="bg-white text-black text-center py-4">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Vibes Events</p>
+        </div>
     </footer>
 </body>
 </html>
