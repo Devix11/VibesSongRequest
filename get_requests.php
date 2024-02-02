@@ -19,17 +19,18 @@ $sql = 'SELECT * FROM richieste';
 $result = $dbConnection->query($sql);
 
 if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
         $likes = $row['likes']; // Aggiungi questa riga per ottenere il numero di likes
-        while ($row = $result->fetch_assoc()) {
+        echo'<table class="table-auto">';
+        foreach ($result as $row) {
             $likes = $row['likes']; // Aggiungi questa riga per ottenere il numero di likes
             echo '<thead>';
             echo '<tr>';
             echo '<th><li><a class="bg-cyan-500 shadow-lg shadow-cyan-500/50" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></li></th>';
             echo '</tr>';
         }
+        echo'</table>'
     }
-} else {
+else {
     echo '<p>Nessuna richiesta trovata.</p>';
 }
 
