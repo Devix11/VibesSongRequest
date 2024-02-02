@@ -30,10 +30,7 @@
             <input type="checkbox" id="instagramButton" name="instagramButton" required>
             Hai cliccato il link Instagram?
         </label>
-    </div>
-</form>
-
-                    
+    </div>          
                     <div class="mb-4">
                         <button type="submit" id="submitButton" name="submit" class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition duration-300">Invia Richiesta</button>
                     </div>
