@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Lista Richieste</title>
     <!-- Aggiungi il collegamento a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head><body>
 <?php
@@ -20,7 +21,7 @@ $result = $dbConnection->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $likes = $row['likes']; // Aggiungi questa riga per ottenere il numero di likes
-        echo '<li><a style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></li>';
+        echo '<li><a class="bg-cyan-500 shadow-lg shadow-cyan-500/50" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></li>';
     }
 } else {
     echo '<p>Nessuna richiesta trovata.</p>';
