@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
             $likes = $row['likes']; // Aggiungi questa riga per ottenere il numero di likes
             echo '<thead>';
             echo '<tr>';
-            echo '<th><li><a class="bg-cyan-500 shadow-lg shadow-cyan-500/50" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></li></th>';
+            echo '<th><a class="bg-cyan-500 shadow-lg shadow-cyan-500/50" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></th>';
             echo '</tr>';
         }
         echo'</table>';
