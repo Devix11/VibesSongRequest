@@ -19,7 +19,7 @@ $sql = 'SELECT * FROM richieste';
 $result = $dbConnection->query($sql);
 
 // Apri la tabella all'inizio del codice
-echo '<table class="table-auto bg-cyan-500">';
+echo '<table class="table-auto">';
 if ($result->num_rows > 0) {
     // Inizia il ciclo foreach per le righe dei risultati
     foreach ($result as $row) {
