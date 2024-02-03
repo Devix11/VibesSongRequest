@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
         // Stampa l'intestazione della tabella
         echo '<thead>';
         echo '<tr>';
-        echo '<th><a class="bg-indigo-500 shadow-lg shadow-indigo-500/50" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></th>';
+        echo '<th><a class="bg-orange-500 shadow-lg shadow-orange-500/10" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></th>';
         echo '</tr>';
         echo '</thead>';
     }
