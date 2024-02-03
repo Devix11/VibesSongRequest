@@ -18,21 +18,27 @@ if ($dbConnection->connect_error) {
 $sql = 'SELECT * FROM richieste';
 $result = $dbConnection->query($sql);
 
+// Apri la tabella all'inizio del codice
+echo '<table class="table-auto">';
 if ($result->num_rows > 0) {
-        $likes = $row['likes']; // Aggiungi questa riga per ottenere il numero di likes
-        echo'<table class="table-auto">';
-        foreach ($result as $row) {
-            $likes = $row['likes']; // Aggiungi questa riga per ottenere il numero di likes
-            echo '<thead>';
-            echo '<tr>';
-            echo '<th><a class="bg-cyan-500 shadow-lg shadow-cyan-500/50" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></th>';
-            echo '</tr>';
-        }
-        echo'</table>';
+    // Inizia il ciclo foreach per le righe dei risultati
+    foreach ($result as $row) {
+        // Ottieni il numero di "likes" da questa riga
+        $likes = $row['likes'];
+        
+        // Stampa l'intestazione della tabella
+        echo '<thead>';
+        echo '<tr>';
+        echo '<th><a class="bg-cyan-500 shadow-lg shadow-cyan-500/50" style="color:black">' . $row['titolo'] . ' - ' . $row['artista'] .'</a></th>';
+        echo '</tr>';
+        echo '</thead>';
     }
-else {
+    // Chiudi la tabella alla fine del ciclo
+    echo '</table>';
+} else {
     echo '<p>Nessuna richiesta trovata.</p>';
 }
+
 
 $dbConnection->close();
 ?>
