@@ -10,6 +10,8 @@
 <body class="bg-red-500 text-white">
     <header class="text-white text-center py-4 bg-red-500">
         <h1 class="text-3xl bg-red-500">Lista Richieste</h1>
+        <!-- Aggiungi un link per richiedere un'altra canzone tornando alla pagina index.php -->
+        <a href="index.php" class="text-blue-500">Richiedi un'altra canzone cliccando qui</a>
     </header>
     <main class="bg-white p-8 mt-8 rounded-lg shadow-lg max-w-md mx-auto">
         <ul class="list-inside list-disc">
